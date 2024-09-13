@@ -1,0 +1,71 @@
+/* Start Header */
+header {
+  background-image: linear-gradient(15deg, #57a1aa 0%, #80d0c7 100%);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(207, 211, 211, 0.35);
+}
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+.navgation {
+  z-index: 1;
+}
+.disable_link {
+  opacity: 0;
+}
+.nav__link {
+  margin: 10px;
+  padding: 10px;
+  letter-spacing: -0.2px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white-color);
+  transition: 0.3s ease;
+}
+.nav__link:hover,
+.nav__link.active {
+  color: var(--link-hover-color);
+}
+.user {
+  z-index: 1;
+  animation: move 0.9s infinite alternate ease-in-out;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+.icon-user {
+  font-size: 20px;
+  background-color: var(--white-color);
+  padding: 13px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.icon-user:hover {
+  background-color: var(--link-hover-color);
+  color: var(--white-color);
+}
+/* End Header */
